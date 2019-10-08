@@ -322,7 +322,8 @@ function results(){
         if (correct<20 && count > 0 && min > 0){
             $('#dialog').html(`Geography isn't for everyone! You scored ${correct}/50 in ${9-min} minutes and ${60-count} second(s)! Did you want to play again?`);
         };
-
+        
+        $('input').prop('readonly', true);
         $('#dialog').css('visibility', 'visible');
         $('.ui-dialog-buttons').css('opacity', 1);
         $( "#dialog" ).dialog();
